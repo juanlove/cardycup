@@ -1,0 +1,2 @@
+# cardycup
+CardyCup Ban Pick 
