@@ -461,7 +461,7 @@ export const characters: GenshinCharacter[] = [
     collab: false,
   },
   {
-    id: 64,
+    id: 67,
     fullName: 'Traveler',
     shortName: 'Traveler',
     stars: 5,

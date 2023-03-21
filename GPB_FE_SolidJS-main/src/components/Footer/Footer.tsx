@@ -12,6 +12,12 @@ export default function Footer(props : any) {
             <div class="footer-content">
                 <ul class="info">
                     <li><a
+                        href="https://twitch.tv/cardydesu"
+                        target="_blank"
+                    >
+                        Twitch
+                    </a></li>
+                    <li><a
                         href="https://github.com/emilebui/GBP_Deploy"
                         target="_blank"
                     >

@@ -17,7 +17,7 @@ export default function Root() {
     return (
         <Html lang="en">
             <Head>
-                <Title>Genshin Ban Pick</Title>
+                <Title>Cardy Cup</Title>
                 <Meta charset="utf-8"/>
                 <Meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
