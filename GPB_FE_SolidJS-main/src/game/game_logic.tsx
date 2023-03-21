@@ -122,13 +122,13 @@ const BoardUpdate = (gs : any) => {
     // Update p1_ban
     const p1_ban = gs.board.p_1_ban
     if (p1_ban) {
-        setBanList1(createTeamArray(p1_ban, 4))
+        setBanList1(createTeamArray(p1_ban, 3))
     }
 
     // Update p2_ban
     const p2_ban = gs.board.p_2_ban
     if (p2_ban) {
-        setBanList2(createTeamArray(p2_ban, 4))
+        setBanList2(createTeamArray(p2_ban, 3))
     }
 
     // Update p1_pick

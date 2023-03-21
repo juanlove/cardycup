@@ -110,7 +110,7 @@ const AvatarBox = (p : any, player_turn: string, watch : boolean) => {
 }
 
 const annouceGameStarted = ( player : string ) => {
-    annouceContent(
+    announceContent(
         <>
             <h1>Game Started</h1>
             <h3>{`${player} will go first!!`}</h3>
@@ -118,7 +118,7 @@ const annouceGameStarted = ( player : string ) => {
     )
 }
 
-const annouceContent = (body : JSX.Element) => {
+const announceContent = (body : JSX.Element) => {
     setAnnounceBody(body)
     setAnnounceDisplay(true)
     setTimeout(() => setAnnounceDisplay(false), 3000)

@@ -61,6 +61,10 @@
   gap: var(--size-grid-gap);
 }
 
+.grid.ban {
+  grid-template-columns: repeat(3, var(--size-card-min-width));
+}
+
 .grid.team {
   grid-template-columns: repeat(4, var(--size-card-min-width));
 }

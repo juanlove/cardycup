@@ -222,20 +222,20 @@ const App: Component<AppProps> = (props) => {
                     </div>
                     <h3 class={styles.title}>Ban List</h3>
                     <div class={styles.teams}>
-                        <div class={`${styles.grid} ${styles.team}`}>
+                        <div class={`${styles.grid} ${styles.ban}`}>
                             <For each={banlist1}>{(id, i) => id2Card(id, i())}</For>
                         </div>
                         <div class={`${styles.timer2} ${styles.chat_hidden}`}>
                             <p>Time Remaining</p>
                         </div>
-                        <div class={`${styles.grid} ${styles.team}`}>
-                            <For each={banlist2}>{(id, i) => id2Card(id, i(), 4)}</For>
+                        <div class={`${styles.grid} ${styles.ban}`}>
+                            <For each={banlist2}>{(id, i) => id2Card(id, i(), 3)}</For>
                         </div>
                     </div>
                     <h3 class={styles.title}>Pick List</h3>
                     <div class={styles.teams}>
                         <div class={`${styles.grid} ${styles.team}`}>
-                            <For each={picklist1}>{(id, i) => id2Card(id, i(), 8)}</For>
+                            <For each={picklist1}>{(id, i) => id2Card(id, i(), 6)}</For>
                         </div>
                         <div class={styles.timer2}
                             classList={{
@@ -246,7 +246,7 @@ const App: Component<AppProps> = (props) => {
                             <h1>{Math.floor(timer() / 20) + 1}s</h1>
                         </div>
                         <div class={`${styles.grid} ${styles.team}`}>
-                            <For each={picklist2}>{(id, i) => id2Card(id, i(), 16)}</For>
+                            <For each={picklist2}>{(id, i) => id2Card(id, i(), 14)}</For>
                         </div>
                     </div>
                     <Toaster/>

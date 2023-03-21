@@ -2,7 +2,7 @@
 addr: localhost:8000
 
 # CORS config
-CORS: ["localhost", "genshinbanpick.com", "", "76.4.240.76:8000"]
+CORS: ["localhost", "genshinbanpick.com", ""]
 
 
 # Redis config
