@@ -1,0 +1,64 @@
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    top: 0;
+    transform: translate(0%, -50%) scale(0.5);
+    transition: opacity 300ms ease-in-out,
+                top 300ms ease-in-out,
+                transform 500ms ease-in-out;
+}
+
+.popup.active {
+    opacity: 1;
+    top: 50%;
+    transform: translate(0%, -50%) scale(1);
+    transition: transform 500ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 70%;
+    background-color: #2d3861;
+    z-index: 2;
+    border-color: #4d4280;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    overflow: auto;
+}
+
+.ava_grid {
+    display: grid;
+    grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--size-card-min-width), 1fr)
+  );
+    justify-content: center;
+    padding: 2rem 9rem;
+    gap: var(--size-grid-gap);
+}
+
+.ava_grid_team {
+    grid-template-columns: repeat(8, var(--size-card-min-width));
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, min(var(--size-card-min-width)));
+    }
+}
+
+.avatar_img {
+    width: 80px;
+    height: 80px;
+}
