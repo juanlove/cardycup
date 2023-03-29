@@ -3,12 +3,13 @@ package logic
 import (
 	"context"
 	"errors"
+	"time"
+
 	"github.com/emilebui/GBP_BE_WS/pkg/global"
 	"github.com/emilebui/GBP_BE_WS/pkg/gstatus"
 	"github.com/emilebui/GBP_BE_WS/pkg/helper"
 	"github.com/gorilla/websocket"
 	"github.com/redis/go-redis/v9"
-	"time"
 )
 
 type GameLogic struct {
@@ -148,7 +149,7 @@ func (g *GameLogic) banPickLogic(gs *GameState, mr *MoveRequest, pick bool) erro
 		return errors.New(global.TextConfig["invalid_data_type"])
 	}
 
-	if _, ok = gs.BPMap[hid]; ok {
+	if _, ok = gs.BPMap[hid]; ok && hid != -1 {
 		return errors.New(global.TextConfig["already_chosen"])
 	}
 

@@ -239,14 +239,12 @@ const GameNotification = (gs : any) => {
     }
 }
 
-const RandomMove = (client : any) => {
+const EmptyMove = (client : any) => {
     if (loading() && !gameEnded() && playerTurn() == getCID()) {
-        const unpicked_cards = characters.filter(card => !selectedCharacters.includes(card.id))
-        const random_card = get_random(unpicked_cards)
         if (pick()) {
-            Pick(client, random_card.id)
+            Pick(client, -1)
         } else {
-            Ban(client, random_card.id)
+            Ban(client, -1)
         }
     }
 }
@@ -256,7 +254,7 @@ const timeFlow = (client : any) => {
         setTimer(timer() - 1)
 
         if (timer() === 0) {
-            RandomMove(client)
+            EmptyMove(client)
         }
     }
 }
