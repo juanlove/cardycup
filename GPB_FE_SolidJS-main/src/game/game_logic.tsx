@@ -208,8 +208,7 @@ const GameNotification = (gs : any) => {
     if (loading() && !gameEnded()) {
 
         if (gs.status === GameStatus.ENDED) {
-            notify("The Game has ended!")
-            playSound("/sound/game_over.mp3")
+            notify("Teams are set, prepare yourself!")
             return
         }
 
