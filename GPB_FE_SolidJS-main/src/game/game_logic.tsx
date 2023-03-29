@@ -216,10 +216,8 @@ const GameNotification = (gs : any) => {
             UpdateGame("You", gs)
             if (gs.pick) {
                 notify("Your turn to pick!")
-                playSound("/sound/you_pick.mp3")
             } else {
                 notify("Your turn to ban!")
-                playSound("/sound/you_ban.mp3")
             }
         } else {
             let nickname = p2Info.nickname
@@ -229,10 +227,8 @@ const GameNotification = (gs : any) => {
             UpdateGame(nickname, gs)
             if (gs.pick) {
                 notify(`${nickname} turn to pick!`)
-                playSound("/sound/enemy_pick.mp3")
             } else {
                 notify(`${nickname} turn to ban!`)
-                playSound("/sound/enemy_ban.mp3")
             }
         }
     }
