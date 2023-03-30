@@ -488,7 +488,7 @@ export const characters: GenshinCharacter[] = [
     collab: false,
   },
   {
-    id: 43,
+    id: 40,
     fullName: 'Venti',
     shortName: 'Venti',
     stars: 5,
