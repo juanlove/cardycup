@@ -4,11 +4,12 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"time"
+
 	"github.com/emilebui/GBP_BE_WS/internal/logic"
 	"github.com/emilebui/GBP_BE_WS/pkg/global"
 	"github.com/emilebui/GBP_BE_WS/pkg/gstatus"
 	"github.com/emilebui/GBP_BE_WS/pkg/helper"
-	"time"
 )
 
 func (s *WebSocketHandler) ConnectGame(gid string, player *logic.Player) error {
@@ -55,7 +56,7 @@ func (s *WebSocketHandler) createGame(gid string, player *logic.Player) error {
 func (s *WebSocketHandler) appendPlayer(gs *logic.GameState, player *logic.Player) error {
 	gs.Player2 = *player
 	gs.Status = gstatus.PLAYING
-	logic.ShufflePlayer(gs)
+	//logic.ShufflePlayer(gs)
 	gs.Turn = 1
 	gs.PlayerTurn = logic.GetPlayerTurn(gs)
 	gs.BPMap = map[int]bool{0: false}
