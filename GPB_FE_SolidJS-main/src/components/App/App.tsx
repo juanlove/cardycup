@@ -176,7 +176,7 @@ const App: Component<AppProps> = (props) => {
                 <main>
                     {
                         gameEnded() &&
-                        <h1 class={`${styles.title} ${styles.game_ended}`}>The game has ended!</h1>
+                        <h1 class={`${styles.title} ${styles.game_ended}`}>Teams are set, prepare yourself!</h1>
                     }
                     <AnnoucePopup active={announceDisplay()}>{annouceBody()}</AnnoucePopup>
                     <h1 class={styles.title}>Genshin Impact Ban Pick</h1>
